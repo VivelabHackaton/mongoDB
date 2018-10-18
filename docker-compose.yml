@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mongo-db:
+    build: .
+    container_name: votacionesDB
+    ports:
+    - "27017:27017"
+    volumes:
+    - ./mongodb/db:/data/db
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=votaciones2018.
+    - MONGO_INITDB_DATABASE=votaciones
